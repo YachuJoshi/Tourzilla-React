@@ -1,0 +1,39 @@
+@import './mixin';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1rem = 9px
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem = 8px
+  }
+
+  @include respond(smallest) {
+    font-size: 43.75%; // 1rem = 7px
+  }
+
+  @include respond(tiny) {
+    font-size: 37.5%; // 1rem = 6px
+  }
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.row {
+  max-width: 120rem;
+  margin: 0 auto;
+}

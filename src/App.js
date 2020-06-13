@@ -1,10 +1,17 @@
 import React from "react";
+import { Router } from "@reach/router";
+
+import { Home } from "./pages/Home";
+
+import "./sass/main.scss";
 
 function App() {
   return (
-    <>
-      <h1>Hello World</h1>
-    </>
+    <div className="App">
+      <Router>
+        <Home path="/" />
+      </Router>
+    </div>
   );
 }
 
