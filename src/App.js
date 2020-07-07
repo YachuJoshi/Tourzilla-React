@@ -1,6 +1,5 @@
 import React from "react";
-import { Router } from "@reach/router";
-
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 
 import "./sass/main.scss";
@@ -9,7 +8,11 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Home path="/" />
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+        </Switch>
       </Router>
     </div>
   );
